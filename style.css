@@ -18,7 +18,7 @@ body {
 }
 
 .navbar {
-    width: 21em;
+    width: 19em;
     border-radius: 10px;
     position: sticky;
     top: 0px;
@@ -285,6 +285,19 @@ border-radius: 31px 0px 0px 31px;
     align-items: center;
 
 }
+.media a #btn3{
+    padding: 5px;
+    background-color: red;
+    color: white;
+    height: 35px;
+    width: 90px;
+    border-radius: 10px;
+}
+.media a #btn3:hover{
+    background-color: orangered;
+    color: white;
+    cursor: pointer;
+}
 .media .box6 a{
     outline: none;
 }
@@ -321,6 +334,8 @@ border-radius: 31px 0px 0px 31px;
 {
     /* body{overflow-x: hidden;} */
     .section{
+        /* margin-top: 20px;
+        padding: 40px; */
         grid-template-columns: 1fr;
         grid-row-gap: 0px;
     }
