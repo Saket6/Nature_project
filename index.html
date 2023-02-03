@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeauNature.com</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="navbar" id="navbar">
+        <nav><img src="logo2.jpg" alt="" width="70px" height="70px">
+            <ul>
+                <li><a href="#container">Home</a></li>
+                <li><a href="#section2"> About</a></li>
+                <li><a href="#media">Contact</a> </li>
+                <!-- <li><input type="search" id="search" placeholder="search here..."></li> -->
+            </ul>
+        </nav>
+    </div>
+    <div class="container" id="container">
+        <div id="box1">
+            <h1>Let's Dive</h1>
+            <h2>Into The</h2>
+            <h3>Beauty of Nature</h3>
+        </div>
+        <a href="#latestnews">
+        <button id="btn1" onclick="togglehide()">Learn More</button></a>
+
+    </div>
+    <div class="header" id="latestnews">
+        <h1>Latest News</h1>
+    </div>
+    <div class="section" id="section">
+        <div class="box2">
+            <img src="1.jpg" alt="" href="www.facebook.com" height="300px" width="300px">
+            <p>POST 1</p>
+            <P>Sun, December 4,2022 | No comments</P>
+        </div>
+        <div class="box2">
+            <img src="2.jpg" alt="" height="300px" width="300px">
+            <p>POST 2</p>
+            <P>Sun, December 4,2022 | No comments</P>
+        </div>
+        <div class="box2">
+            <img src="3.jpg" alt="" height="300px" width="300px">
+            <p>POST 3</p>
+            <P>Sun, December 4,2022 | No comments</P>
+        </div>
+        <div class="box2">
+            <img src="4.jpg" alt="" height="300px" width="300px">
+            <p>POST 4</p>
+            <P>Sun, December 4,2022 | No comments</P>
+        </div>
+        <div class="box2"><img src="5.jpg" alt="" height="300px" width="300px">
+            <p>POST 5</p>
+            <P>Sun, December 4,2022 | No comments</P>
+        </div>
+        <div class="box2"><img src="6.jpg" alt="" height="300px" width="300px">
+            <p>POST 6</p>
+            <P>Sun, December 4,2022 | No comments</P>
+        </div>
+        <div class="box2"><img src="7.jpg" alt="" height="300px" width="300px">
+            <p>POST 7</p>
+            <P>Sun, December 4,2022 | No comments</P>
+        </div>
+        <div class="box2"><img src="8.jpg" alt="" height="300px" width="300px">
+            <p>POST 8</p>
+            <P>Sun, December 4,2022 | No comments</P>
+        </div>
+    </div>
+    <div class="section2" id="section2">
+        <div class="box3"><img src="eco.jpg" alt="" height="500px" width="500px"></div>
+        <div class="box4">
+            <h1>Let's Understand..</h1>
+            <p>
+
+                In nature, nothing is perfect and everything is perfect. Trees can be contorted, bent in weird ways, and
+                they're
+                still beautiful. -Alice Walker Forget not that the earth delights to feel your bare feet and the winds
+                long to
+                play with your hair. —Khalil Gibran
+                Look deep into nature, and then you will understand everything better. —Albert Einstein
+                Heaven is under our feet as well as over our heads. —Henry David Thoreau
+                To me a lush carpet of pine needles or spongy grass is more welcome than the most luxurious Persian rug.
+                —Helen Keller
+                We dont inherit the earth from our ancestors, we borrow it from our children. —Native American proverb
+            </p>
+        </div>
+    </div>
+    <div class="section3">
+        <label for="mail">Subscribe to Us</label>
+        <div class="box5">
+            <!-- <h1>Subscribe to Us</h1> -->
+            <form action="#" id="form">
+
+                <input type="email" name="mail" id="mail" placeholder="Please enter your email here..">
+                <input type="submit" value="Subscribe" name="Subscribe" id="subscribe">
+            </form>
+        </div>
+    </div>
+    <div class="media" id="media">
+        <h2>Our social media handles</h2>
+        <div class="box6">
+            <a href="https://www.facebook.com/"><img src="facebook.jpg" alt="" height="40px" width="40px"></a><a
+                href="https://www.whatsapp.com/"><img src="wp.jpg" alt="" height="40px" width="40px"></a><a href="https://www.instagram.com/"><img
+                    src="insta.jpg" alt="" height="40px" width="40px"></a><a href="https://twitter.com/"><img src="twitter.jpg"
+                    alt="" height="40px" width="40px"></a>
+        </div>
+        <a href="#navbar"><button id="btn3">Move to top</button></a>
+    </div>
+    <script>
+    function togglehide(){
+    
+    let btn = document.getElementById('btn1');
+    let section = document.getElementById('section');
+    let head = document.getElementById('latestnews');
+    if(section.style.display != 'none')
+    {
+            section.style.display = 'none';
+            section.style.transitionDuration= 'all 6s';
+            head.style.display = 'none';
+
+    }
+    else{
+        section.style.display = 'grid';
+        section.style.transition = '5s';
+        head.style.display = 'flex';
+
+    }
+}
+    </script>
+</body>
+
+</html>
