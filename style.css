@@ -16,6 +16,13 @@ body {
     background-attachment: fixed;
     overflow-x: hidden;
 }
+ /* .fadeInLeft{
+
+    -webkit-animation: fadeInLeft 1.2s both;
+    -moz-animation: fadeInLeft 1.2s both;
+    -o-animation: fadeInLeft 1.2s both;
+    animation: fadeInLeft 1.2s both;
+} */
 
 .navbar {
     width: 21em;
@@ -27,7 +34,8 @@ body {
     font-size: larger;
     background-color: rgba(0, 0, 0, 0.532);
     animation-name: display;
-    animation-duration: 2s;
+    /* -webkit-animation: forwards; */
+    animation-duration: 1s;
     animation-delay: 0s;
     /* position: relative; */
 
@@ -36,8 +44,10 @@ body {
 
 @keyframes display {
     0%{
-        margin-left: -100em;}
-    100%{margin-left: 0%;}
+        opacity: 0;
+    transform: translateX(-6em);}
+    100%{opacity: 1;
+    transform: translateX(0px);}
     
 }
 
@@ -88,19 +98,24 @@ body {
     justify-content: center;
     /* margin: 30px; */
     padding: 20px;
-    animation-name: disp;
-    animation-duration: 2s;
-    animation-delay: 0s;
+    /* animation-name: disp;
+    animation-duration: 1s;
+    animation-delay: 0s; */
 
 }
 @keyframes disp {
-    0%{margin-right: -100em;}
-    100%{display: flex;
+    0%{opacity: 0;
+    transform: translateX(200px);}
+    /* 100%{display: flex;
         flex-direction: column;
         align-items: center;
     
         justify-content: center;}
-    
+     */
+     100%{
+        opacity: 1;
+        transform: translateX(0px);
+     }
 }
 
 .container #box1 {
@@ -112,7 +127,9 @@ body {
     justify-content: center;
     align-items: center;
     padding: 100px;
-
+    animation-name: disp;
+    animation-duration: 2s;
+    animation-delay: 0s;
     width: 55em;
     /* margin-top: 55px; */
     color: rgb(249, 209, 51);
@@ -160,7 +177,8 @@ body {
 }
 
 .header {
-    margin-top: 120px;
+    display: none;
+    /* margin-top: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -169,19 +187,46 @@ body {
     color: #ffa705;
     width: 33em;
     border-radius: 5px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
   }
-
+.header_new
+{
+    display: flex;
+    margin-top: 120px;
+    
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(8, 8, 8, 0.18);
+    font-size: 23px;
+    color: #ffa705;
+    width: 33em;
+    border-radius: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 .section {
-    background-color: rgba(8, 8, 8, 0.868);
+    display: none;
+    /* background-color: rgba(8, 8, 8, 0.868);
+    
     display: grid;
     border-radius: 44px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-items: center;
     grid-row-gap: 5em;
     padding: 40px 20px 40px 20px;
-    margin: 50px 75px 15px 75px;
+    margin: 50px 75px 15px 75px; */
     /* display: none; */
+}
+.section_new
+{
+    display: grid;
+    background-color: rgba(8, 8, 8, 0.868);
+   
+    border-radius: 44px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    grid-row-gap: 5em;
+    padding: 40px 20px 40px 20px;
+    margin: 50px 75px 15px 75px;
 }
 
 .section .box2 {
@@ -226,7 +271,7 @@ grid-template-columns: 2fr 2fr;
 justify-items: center;
 grid-row-gap: 5em;
 padding: 40px 20px 40px 20px;
-margin: 22em 0px 15px 170px;
+margin: 8em 0px 15px 170px;
 border-radius: 31px 0px 0px 31px;
 }
 

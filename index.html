@@ -7,10 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BeauNature.com</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.0/dist/aos.css" rel="stylesheet" />
 </head>
 
 <body>
-    <div class="navbar" id="navbar">
+
+     
+        
+    <div class="navbar fadeInLeft" id="navbar">
         <nav><img src="logo2.jpg" alt="" width="70px" height="70px">
             <ul>
                 <li><a href="#container">Home</a></li>
@@ -20,20 +24,20 @@
             </ul>
         </nav>
     </div>
-    <div class="container" id="container">
-        <div id="box1">
+    <div class="container fadeInLeft" id="container">
+        <div id="box1"  class="fadeInLeft">
             <h1>Let's Dive</h1>
             <h2>Into The</h2>
             <h3>Beauty of Nature</h3>
         </div>
-        <a href="#latestnews">
-        <button id="btn1" onclick="togglehide()">Learn More</button></a>
+        <!-- <a href="#latestnews"> -->
+        <button id="btn1" onclick="togglehide()">Learn More</button>
 
     </div>
-    <div class="header" id="latestnews">
+    <div class="header" id="latestnews" data-aos="fade-right">
         <h1>Latest News</h1>
     </div>
-    <div class="section" id="section">
+    <div class="section" id="section" data-aos="fade-right">
         <div class="box2">
             <img src="1.jpg" alt="" href="www.facebook.com" height="300px" width="300px">
             <p>POST 1</p>
@@ -71,7 +75,7 @@
             <P>Sun, December 4,2022 | No comments</P>
         </div>
     </div>
-    <div class="section2" id="section2">
+    <div class="section2" id="section2" data-aos="fade-left">
         <div class="box3"><img src="eco.jpg" alt="" height="500px" width="500px"></div>
         <div class="box4">
             <h1>Let's Understand..</h1>
@@ -112,26 +116,32 @@
         <a href="#navbar"><button id="btn3">Move to top</button></a>
     </div>
     <script>
-    function togglehide(){
-    
-    let btn = document.getElementById('btn1');
-    let section = document.getElementById('section');
-    let head = document.getElementById('latestnews');
-    if(section.style.display != 'none')
-    {
-            section.style.display = 'none';
-            section.style.transitionDuration= 'all 6s';
-            head.style.display = 'none';
+        function togglehide()
+     {
+         let btn=document.getElementById("btn1");
+         let section=document.getElementById("section");
+         let head=document.getElementById("latestnews");
+         if(btn.innerHTML=="Learn More")
+         {
 
-    }
-    else{
-        section.style.display = 'grid';
-        section.style.transition = '5s';
-        head.style.display = 'flex';
-
-    }
-}
+            section.classList.add("section_new");
+            btn.innerHTML="Show Less";
+         }
+         else
+         {
+            section.classList.remove("section_new"); 
+            btn.innerHTML="Learn More";
+         }
+     }
     </script>
+
+
+    <script src="https://unpkg.com/aos@2.3.0/dist/aos.js">
+
+    </script>
+    <script>        AOS.init({
+        duration: 2200,
+      })</script>
 </body>
 
 </html>
